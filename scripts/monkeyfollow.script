@@ -1,0 +1,19 @@
+--Pablo Marcos Serrano
+
+go.property("speed", 170)
+
+function init(self)
+	go.set_position(vmath.vector3(350, 275,0.5))
+	self.direction = vmath.vector3(0, 0, 0)
+end
+
+function update(self, dt)
+	go.set_position(go.get_position() + self.direction * self.speed * dt)
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("Move") then
+		local new_direction = message.direction
+		self.direction = new_direction * -1
+	end
+end

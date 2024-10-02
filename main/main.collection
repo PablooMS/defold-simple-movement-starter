@@ -43,3 +43,27 @@ embedded_instances {
     z: 0.5
   }
 }
+embedded_instances {
+  id: "monkey"
+  data: "components {\n"
+  "  id: \"monkeyfollow\"\n"
+  "  component: \"/scripts/monkeyfollow.script\"\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"sprite\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"default_animation: \\\"monkey_idle\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "textures {\\n"
+  "  sampler: \\\"texture_sampler\\\"\\n"
+  "  texture: \\\"/main/characters.atlas\\\"\\n"
+  "}\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 323.0\n"
+  "    y: 91.0\n"
+  "    z: 0.5\n"
+  "  }\n"
+  "}\n"
+  ""
+}
